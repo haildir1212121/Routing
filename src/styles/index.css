@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply m-0 p-0 bg-bg-primary text-text-primary font-sans;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2.5 h-2.5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full border-2 border-bg-primary;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
+
+@layer components {
+  .panel-border {
+    @apply border border-border;
+  }
+
+  .icon-btn {
+    @apply w-9 h-9 rounded-md flex items-center justify-center cursor-pointer transition-all;
+  }
+
+  .trip-card {
+    @apply p-3 border border-border rounded-lg mb-2 cursor-pointer transition-all hover:border-accent;
+  }
+
+  .trip-card.selected {
+    @apply border-accent bg-orange-50;
+  }
+
+  .driver-card {
+    @apply p-3 border border-border rounded-lg mb-2 cursor-pointer transition-all hover:border-accent;
+  }
+
+  .strategy-btn {
+    @apply w-full flex items-center justify-between p-2 border-b border-border text-left cursor-pointer transition-all;
+  }
+
+  .strategy-btn:last-child {
+    @apply border-b-0;
+  }
+
+  .strategy-btn.active {
+    @apply bg-text-primary text-bg-secondary;
+  }
+}
